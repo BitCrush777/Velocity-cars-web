@@ -1,4 +1,4 @@
-:HL["/Velocity-cars-web/_next/static/chunks/0eqye13plmftp.css","style"]
+:HL["/Velocity-cars-web/_next/static/chunks/0pfy-1r2mwoqg.css","style"]
 :HL["/Velocity-cars-web/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/Velocity-cars-web/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"BR668Sy8Q0Ea1YvsCflQb"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"iY7WbX0WBy9uQVONxOU0i"}
