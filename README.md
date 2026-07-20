@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏎️ Velocity Motors Experience
 
-## Getting Started
+Welcome to the **Velocity Motors Experience**! This is a luxury online car dealership platform featuring a real-time 3D vehicle configurator. It has been built using modern web technologies in a clean, modular way, making it ideal for beginners to learn React, Three.js, and Next.js.
 
-First, run the development server:
+Live Website: **[https://bitcrush777.github.io/Velocity-cars-web/](https://bitcrush777.github.io/Velocity-cars-web/)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🛠️ Technology Stack Explained
+
+*   **Next.js (App Router)**: The framework used to manage pages, layouts, and routing.
+*   **React & TypeScript**: Used for creating interactive elements (tabs, inputs, sliders) with type safety.
+*   **Tailwind CSS**: A utility-first CSS framework for luxury dark-mode aesthetics.
+*   **Three.js & React Three Fiber (R3F)**: Renders the interactive 3D car model directly in the browser canvas.
+*   **Lucide React**: Premium icon pack for dashboard UI.
+
+---
+
+## 📂 Project Architecture
+
+Here is a simple map of where everything is located:
+
+```text
+├── .github/workflows/      # Automated scripts to deploy the site to GitHub Pages
+├── src/
+│   ├── app/                # Page folders
+│   │   ├── configure/      # 3D Configurator page (e.g. /configure/lamborghini-revuelto-2024)
+│   │   ├── inventory/      # Dealership fleet search & filter page
+│   │   ├── vehicles/       # Detailed specifications page
+│   │   ├── globals.css     # Global CSS styling
+│   │   └── page.tsx        # Home Page (hero, investment calculator)
+│   ├── components/         # Reusable UI Blocks
+│   │   ├── BackgroundShader.tsx # Custom WebGL animated energy background
+│   │   ├── Configurator3D.tsx   # React Three Fiber 3D scene & car geometry
+│   │   ├── TopNavBar.tsx        # Header navigation
+│   │   └── Footer.tsx           # Footer details
+│   └── data/
+│       └── inventory.ts    # Central mock database of vehicle details
+├── next.config.ts          # Configurations for static page exports
+└── package.json            # Lists dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💡 Code Highlights (For Learning)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. The 3D Configurator (`src/components/Configurator3D.tsx`)
+This component uses **React Three Fiber** (a React wrapper for Three.js) to render a 3D car silhouette. It dynamically updates:
+*   **Paint finish**: Adjusts `roughness` and `metalness` based on whether the user selects *Matte*, *Metallic*, *Gloss*, *Satin*, or *Chrome*.
+*   **Body Kit components**: Conditional rendering of splitters and spoilers based on toggled checkboxes.
 
-## Learn More
+### 2. Custom WebGL Shader (`src/components/BackgroundShader.tsx`)
+Renders a custom neon blue wave pattern on a GPU canvas to create a futuristic vibe. It uses WebGL fragment shaders for high performance.
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Dynamic Filtering (`src/app/inventory/page.tsx`)
+Uses React's `useMemo` to filter through the database array dynamically as you type or adjust filters, calculating performance indicators instantly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Running Locally
 
-## Deploy on Vercel
+Want to play around with the code? Follow these simple steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  **Clone your repository**:
+    ```bash
+    git clone https://github.com/BitCrush777/Velocity-cars-web.git
+    cd Velocity-cars-web
+    ```
+2.  **Install dependencies**:
+    ```bash
+    npm install --legacy-peer-deps
+    ```
+3.  **Run the local server**:
+    ```bash
+    npm run dev
+    ```
+4.  Open `http://localhost:3000` in your browser.
